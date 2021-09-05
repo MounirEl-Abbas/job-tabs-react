@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f5f8;
+}
+.container {
+  width: 90vw;
+  margin: auto;
+}
+.container h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 40px;
+}
+/*******************************/
+.job-container {
+  display: flex;
+  width: 100%;
+}
+.button-container {
+  width: 20%;
+}
+.job-info {
+  width: 80%;
+}
+/*******************************/
+
+.button-container ul {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 60%;
+  justify-content: space-evenly;
+  font-size: 22px;
+  list-style: none;
+  width: 140px;
+  text-align: center;
+}
+.job-btn {
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.job-btn:hover {
+  color: #7fbbbc;
+  border-left: 2px solid #7fbbbc;
+}
+.active-btn {
+  color: #7fbbbc;
+  border-left: 2px solid #7fbbbc;
+}
+/*******************************/
+.job-info h2,
+.job-info h4,
+.job-date {
+  letter-spacing: 2px;
+}
+.job-info h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
+.job-info h4 {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #dae2ec;
+  color: #617d98;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+.job-date {
+  display: block;
+  color: #617d98;
+}
+.job-desc {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+}
+.arrow-icon {
+  width: 10%;
+  color: #2caeba;
+}
+.job-desc p {
+  width: 90%;
+}
+
+@media (max-width: 992px) {
+  .job-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .button-container {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .button-container ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .job-btn:hover {
+    border-left: none;
+    border-bottom: 2px solid #7fbbbc;
+  }
+  .active-btn {
+    border-left: none;
+    border-bottom: 2px solid #7fbbbc;
+  }
+}
